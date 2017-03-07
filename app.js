@@ -24,6 +24,15 @@ const parseForm = bodyParser.urlencoded({extended: false});
 app.use(parseForm);
 app.use(logger('dev'));
 
+// a route that does not have csrf applied
+// used to test request headers
+
+app.post('/open', (req, res) => {
+	res.status(200).json({
+		requestHeaders: req.headers
+	});
+})
+
 
 // once express session and body parser are used,
 // you can use the csrfProtection module

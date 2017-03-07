@@ -24,6 +24,17 @@
 		<input type="text" name="data">
 
 		<input type="submit" value="submit">
-	</form>	
+	</form>
+
+	<form action="/open" method="post">
+		<h3>Form that posts to the OPEN route</h3>
+
+		<input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+		<label>Data:</label>
+		<input type="text" name="data">
+
+		<input type="submit" value="submit">
+	</form>		
 </body>
 </html>
